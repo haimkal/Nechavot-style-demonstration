@@ -5,7 +5,7 @@ import './NechavotDemo.scss';
 
 export default function NechavotDemo() {
 
-    const [showInstructions, setShowInstructions] = useState(true);
+    // const [showInstructions, setShowInstructions] = useState(true);
 
     const images = [
         { title: "Login", source: 'https://i.ibb.co/PZVj75q/Login-1.jpg' },
@@ -14,19 +14,19 @@ export default function NechavotDemo() {
         { title: "Updated feed", source: 'https://i.ibb.co/tM7C259/new-Feed-4.jpg' },
     ]
 
-    function handleClick() {
-        setShowInstructions(false);
-    }
+    // function handleClick() {
+    //     setShowInstructions(false);
+    // }
 
     return (
         
         <div className="nechavotDemo">
-            {showInstructions && <div className="ins-box" > 
+            {/* {showInstructions && <div className="ins-box" >  
                 <div className='text'> <p> Click on an image to open it </p>
                 <p> Don't forget to click again to close it before opening the next one </p>
                 </div>
                 <button onClick = {handleClick}> Ok </button> 
-            </div>}
+            </div>} */}
             {images.map((image, index)=> {
                 return <Card key={index} className="card" title={image.title} src={image.source} />
             })}
